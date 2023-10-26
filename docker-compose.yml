@@ -6,6 +6,6 @@ services:
       context: .
     restart: always
     ports:
-      - 8000:8000
+      - 7070:7070
     volumes:
       - ./volumes:/app/db

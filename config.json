@@ -1,1 +1,4 @@
-{}
+{
+    "port": 7070,
+    "websocket_port": 7071
+}
