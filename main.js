@@ -10,13 +10,13 @@ const config = ConfigHandler.getConfig();
 var Mustache = require('mustache');
 
 // express
-var express = require('express')
-var favicon = require('serve-favicon')
-var session = require('express-session')
-var cors = require('cors')
+var express = require('express');
+var favicon = require('serve-favicon');
+var session = require('express-session');
+var cors = require('cors');
 
 // express stuff
-var rest = express()
+var rest = express();
 
 //cors
 rest.use(cors())
@@ -199,7 +199,7 @@ function getPreview(res,req,printer,label,zpl){
       console.log((new Date()), err);
       res.json(err);
     }else{
-      res.json({"img":new Buffer(body).toString('base64')});
+      res.json({"img":new Buffer.from(body).toString('base64')});
     }
   });
 }
