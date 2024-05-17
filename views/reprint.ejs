@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Reprint</title>
+  <title>ZPL-REST: Herprinten</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,22 +47,22 @@
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Overview</span></a>
+          <span>Overzicht</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/reprint">
           <i class="fas fa-fw fa-redo"></i>
-          <span>Reprint</span></a>
+          <span>Herprinten</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/label">
           <i class="fas fa-fw fa-tags"></i>
-          <span>Label</span></a>
+          <span>Labels</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/printer">
           <i class="fas fa-fw fa-print"></i>
-          <span>Printer</span></a>
+          <span>Printers</span></a>
       </li>
 
       <!-- Divider -->
@@ -87,16 +87,16 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">reprint</h1>
+            <h1 class="h3 mb-0 text-gray-800">Herprinten</h1>
             <div class="d-none d-sm-inline-block">
               <div class="dropdown shadow-sm">
                 <button class="btn btn-sm btn-primary dropdown-toggle" id="timespan" data-time="<%= timespan %>" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  last 24 hours
+                  Laatste 24 uur
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item time-item" data-time="24" href="#">last 24 hours</a>
-                  <a class="dropdown-item time-item" data-time="168" href="#">last 7 days</a>
-                  <a class="dropdown-item time-item" data-time="720" href="#">last 30 days</a>
+                  <a class="dropdown-item time-item" data-time="24" href="#">Laatste 24 uur</a>
+                  <a class="dropdown-item time-item" data-time="168" href="#">Laatste 7 dagen</a>
+                  <a class="dropdown-item time-item" data-time="720" href="#">Laatste 30 dagen</a>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Job Overview</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Taakoverzicht</h6>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -116,9 +116,9 @@
                         <tr>
                           <th>Printer</th>
                           <th>Label</th>
-                          <th>Date</th>
-                          <th>Error</th>
-                          <th>Action</th>
+                          <th>Datum</th>
+                          <th>Foutmelding</th>
+                          <th>Actie</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -147,15 +147,15 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="jobModalLabel">Job</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title" id="jobModalLabel">Taak</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Sluiten">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <ul class="nav nav-pills" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Reprint</a>
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Herprinten</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Data & ZPL</a>
@@ -176,7 +176,7 @@
                   </div>
                   <div class="col-lg-12 col-md-12" style="margin-top: 20px;">
                     <div class="form-group">
-                      <h6 class="m-0 font-weight-bold text-primary">generated ZPL code</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">Gegenereerde ZPL code</h6>
                       <!-- <input type="text" class="form-control" id="newzpl" placeholder="New ZPL"> --->
                       <textarea class="form-control" id="gzpl" placeholder="generated data" rows="10"></textarea>
                     </div>
@@ -193,7 +193,7 @@
                     </div>
                   </div>
                   <div class="col-6 ">
-                    <button class="btn btn-primary" id="reprint"> reprint</button>
+                    <button class="btn btn-primary" id="reprint"> Herprint</button>
                   </div>
                 </div>
               </div>
@@ -203,14 +203,14 @@
                 <div class="row" style="margin-top:20px;">
                   <div class="col-lg-12 col-md-12 ">
                     <div class="form-group">
-                      <h6 class="m-0 font-weight-bold text-primary">Data send with Job</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">Data verstuurd met taak</h6>
                       <!-- <input type="text" class="form-control" id="newzpl" placeholder="New ZPL"> --->
                       <textarea class="form-control" id="data" placeholder="data" rows="6" readonly></textarea>
                     </div>
                   </div>
                   <div class="col-lg-12 col-md-12 ">
                     <div class="form-group">
-                      <h6 class="m-0 font-weight-bold text-primary">ZPL code saved in Label</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">ZPL code opgeslagen in label</h6>
                       <!-- <input type="text" class="form-control" id="newzpl" placeholder="New ZPL"> --->
                       <textarea class="form-control" id="zpl" placeholder="ZPL" rows="6" readonly></textarea>
                     </div>
@@ -223,7 +223,7 @@
                 <div class="row" style="margin-top:20px;">
                   <div class="col-lg-12 col-md-12 ">
                     <div class="form-group">
-                      <h6 class="m-0 font-weight-bold text-primary">job as JSON</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">Taak als JSON</h6>
                       <!-- <input type="text" class="form-control" id="newzpl" placeholder="New ZPL"> --->
                       <textarea class="form-control" id="json" placeholder="job information as json" rows="15" readonly></textarea>
                     </div>

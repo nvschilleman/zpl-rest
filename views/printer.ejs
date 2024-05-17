@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Printer</title>
+  <title>ZPL-REST: Printers</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,22 +43,22 @@
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Overview</span></a>
+          <span>Overzicht</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/reprint">
           <i class="fas fa-fw fa-redo"></i>
-          <span>Reprint</span></a>
+          <span>Herprinten</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/label">
           <i class="fas fa-fw fa-tags"></i>
-          <span>Label</span></a>
+          <span>Labels</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/printer">
           <i class="fas fa-fw fa-print"></i>
-          <span>Printer</span></a>
+          <span>Printers</span></a>
       </li>
 
       <!-- Divider -->
@@ -83,7 +83,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Printer</h1>
+            <h1 class="h3 mb-0 text-gray-800">Printers</h1>
           </div>
 
           <div class="row">
@@ -91,22 +91,22 @@
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Create Printer</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Printer aanmaken</h6>
                 </div>
                 <div class="card-body">
                   <form id="createprinterform">
                     <div class="form-group">
-                      <label for="newname">Name</label>
-                      <input type="text" class="form-control" id="newname" name="newname" placeholder="Printer Name">
+                      <label for="newname">Naam</label>
+                      <input type="text" class="form-control" id="newname" name="newname" placeholder="Printernaam">
                     </div>
                     <div class="form-group">
-                      <label for="newaddress">Address</label>
-                      <input type="text" class="form-control" id="newaddress" name="newaddress" placeholder="Printer Address IP:Port eg. 127.0.0.1:9100">
+                      <label for="newaddress">IP-Adres + poort</label>
+                      <input type="text" class="form-control" id="newaddress" name="newaddress" placeholder="Printer IP:Poort bijv. 127.0.0.1:9100">
                     </div>
                     <div class="form-group">
                       <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" role="button" id="newdensity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Density / Resolution
+                          Resolutie
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <a class="dropdown-item density-item" data-density="6dpmm" href="#">6 dpmm / 152 dpi</a>
@@ -116,13 +116,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="btn btn-primary" id="createprinter">Create</div>
+                    <div class="btn btn-primary" id="createprinter">Aanmaken</div>
                   </form>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <!-- Basic Card Example -->
+            <!-- <div class="col-lg-6">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Delete Printer</h6>
@@ -137,7 +136,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="row">
@@ -145,7 +144,7 @@
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Edit Printer</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Printer bewerken</h6>
                 </div>
                 <div class="card-body">
                   <div class="dropdown">
@@ -159,24 +158,24 @@
                     <div class="form-group" style="margin-top: 20px;">
                       <label for="printerid">Printer ID</label>
                       <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="printerid" placeholder="ID for REST" readonly>
+                        <input type="text" class="form-control" id="printerid" placeholder="ID voor REST" readonly>
                         <div class="input-group-append">
                           <button class="btn btn-primary copy-button" type="button" data-target="printerid"><i class="fas fa-copy"></i></button>
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="editname">Name</label>
-                      <input type="text" class="form-control" id="editname" name="editname" placeholder="Printer Name">
+                      <label for="editname">Naam</label>
+                      <input type="text" class="form-control" id="editname" name="editname" placeholder="Printernaam">
                     </div>
                     <div class="form-group">
-                      <label for="editaddress">Address</label>
-                      <input type="text" class="form-control" id="editaddress" name="editaddress" placeholder="Printer Address IP:Port eg. 127.0.0.1:9100">
+                      <label for="editaddress">IP-Adres + poort</label>
+                      <input type="text" class="form-control" id="editaddress" name="editaddress" placeholder="Printer IP:Poort bijv. 127.0.0.1:9100">
                     </div>
                     <div class="form-group">
                       <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" role="button" id="editdensity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Density / Resolution
+                          Resolutie
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <a class="dropdown-item density-item" data-density="6dpmm" href="#">6 dpmm / 152 dpi</a>

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>System</title>
+  <title>ZPL-REST Printserver</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,22 +47,22 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Overview</span></a>
+          <span>Overzicht</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/reprint">
           <i class="fas fa-fw fa-redo"></i>
-          <span>Reprint</span></a>
+          <span>Herprinten</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/label">
           <i class="fas fa-fw fa-tags"></i>
-          <span>Label</span></a>
+          <span>Labels</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/printer">
           <i class="fas fa-fw fa-print"></i>
-          <span>Printer</span></a>
+          <span>Printers</span></a>
       </li>
 
       <!-- Divider -->
@@ -91,12 +91,12 @@
             <div class="d-none d-sm-inline-block">
               <div class="dropdown shadow-sm">
                 <button class="btn btn-sm btn-primary dropdown-toggle" id="timespan" data-time="<%= timespan %>" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  last 24 hours
+                  Laatste 24 uur
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item time-item" data-time="24" href="#">last 24 hours</a>
-                  <a class="dropdown-item time-item" data-time="168" href="#">last 7 days</a>
-                  <a class="dropdown-item time-item" data-time="720" href="#">last 30 days</a>
+                  <a class="dropdown-item time-item" data-time="24" href="#">Laatste 24 uur</a>
+                  <a class="dropdown-item time-item" data-time="168" href="#">Laatste 7 dagen</a>
+                  <a class="dropdown-item time-item" data-time="720" href="#">Laatste 30 dagen</a>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"># of Printer used</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Aantal gebruikte printers</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="printercount"></div>
                     </div>
                     <div class="col-auto">
@@ -127,7 +127,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"># of Label used</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Aantal gebruikte labels</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="labelcount"></div>
                     </div>
                     <div class="col-auto">
@@ -144,7 +144,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"># of printjobs</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Aantal printtaken</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="jobcount"></div>
                     </div>
                     <div class="col-auto">
@@ -160,7 +160,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1"># of printjobs failed</div>
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Aantal printtaken mislukt</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="errorcount"></div>
                     </div>
                     <div class="col-auto">
@@ -181,7 +181,7 @@
               <div class="card mb-4 shadow">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"># of printjobs by time</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Aantal printtaken over tijd</h6>
                   <!--
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -211,7 +211,7 @@
                 <div class="card-block">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary"># of printjobs by printer</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Aantal printtaken per printer</h6>
                     <!--
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -255,7 +255,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">failure overview</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Foutlogboek</h6>
                   <!--
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -279,8 +279,8 @@
                         <tr>
                           <th>Printer</th>
                           <th>Label</th>
-                          <th>Date</th>
-                          <th>Error</th>
+                          <th>Datum</th>
+                          <th>Fout</th>
                         </tr>
                       </thead>
                       <tbody>
